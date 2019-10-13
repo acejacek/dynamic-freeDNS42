@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/config/scripts/freedns-dyndns.py --newaddress "<dynamic>"
+python /config/scripts/freedns-dyndns.py --newaddress "<dynamic>"
