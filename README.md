@@ -1,5 +1,5 @@
 # dynamic-freeDNS42
-Dynamic record update for [FreeDNS::42](https://freedns.42.pl) for EdgeOS.
+Dynamic record update at [FreeDNS::42](https://freedns.42.pl), for EdgeOS.
         
 This set of steps provide a functionality of dynamic update of your domain at FreeDNS::42.
 Tested on [ERLite-3](https://www.ui.com/edgemax/edgerouter-lite/) running 1.10.x version of EdgeOS.
@@ -7,11 +7,11 @@ Tested on [ERLite-3](https://www.ui.com/edgemax/edgerouter-lite/) running 1.10.x
 ## Installation
 
 1. Connect via ssh to your router.
-2. Dowload [this Python script](https://freedns.42.pl/freedns-dyndns.py) from https://freedns.42.pl
+2. Dowload [this Python script](https://freedns.42.pl/freedns-dyndns.py) from https://freedns.42.pl:
 ```bash
 curl https://freedns.42.pl/freedns-dyndns.py -o freedns-dyndns.py
 ```
-3. Modify default values hardcoded in script. Look at first lines here:
+3. Modify default values hardcoded in script. Look at these lines:
 ```python
 params = \
 {       "user"          : "yourUserID",
