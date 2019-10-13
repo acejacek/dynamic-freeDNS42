@@ -1,5 +1,5 @@
 # dynamic-freeDNS42
-Dynamic record update for [FreeDNS::42](https://freedns.42.pl) with EdgeOS.
+Dynamic record update for [FreeDNS::42](https://freedns.42.pl) for EdgeOS.
         
 This set of steps provide a functionality of dynamic update of your domain at FreeDNS::42.
 Tested on [ERLite-3](https://www.ui.com/edgemax/edgerouter-lite/) running 1.10.x version of EdgeOS.
