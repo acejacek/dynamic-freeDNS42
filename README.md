@@ -56,3 +56,18 @@ There should be entry similar to this:
 ```
 Oct 13 17:34:14 edge FreeDNS::42: result: {'serial': '2005106563', 'ttl': 600, 'name': '@', 'zone': 'your.domain.here', 'addresses': ['123.123.123.123']}
 ```
+## Tune up
+Limit the log data. Every scheduler action will record its event in log file, which I find verbose.
+Modify `/config/scripts/freedns-dyndns-cronjob.sh` script in following way:
+```
+python /config/scripts/freedns-dyndns.py --newaddress "<dynamic>" 2>&1 >/dev/null | logger -t "FreeDNS::42"
+```
+This will direct only error messages to logger. Next step, edit `/config/scripts/freedns-dyndns.py`. Change one line only:
+```
+print e
+```
+to 
+```
+print >> sys.stderr, e
+```
+Job done, from now on in `/var/log/messages` only errors will be logged.
